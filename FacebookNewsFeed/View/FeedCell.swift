@@ -15,11 +15,10 @@ class FeedCell: UICollectionViewCell {
             
             statusImageView.image = nil
             
-            startLoading()
-            
             if let statusImageUrl = post?.statusImageUrl {
                 
                 if let statusImageUrl = post?.statusImageUrl, let url = URL(string: statusImageUrl) {
+                    startLoading()
                     let session = URLSession.shared
                     let task = session.dataTask(with: url) { data, response, error in
                         
@@ -77,7 +76,6 @@ class FeedCell: UICollectionViewCell {
         
         if let profileImageName = post?.profileImageName {
             profileImageView.image = UIImage(named: profileImageName)
-            stopLoading()
         }
         
         if let statusImageName = post?.statusImageName {
@@ -191,6 +189,7 @@ class FeedCell: UICollectionViewCell {
         addConstraintsWithFormat(format: "V:[v0(44)]|", views: commentButton)
         addConstraintsWithFormat(format: "V:[v0(44)]|", views: shareButton)
         
+        // 可以用上面的方式寫看看
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             activityIndicator.centerXAnchor.constraint(equalTo: statusImageView.centerXAnchor),

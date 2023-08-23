@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2519A61A2A965387004C5829 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2519A6192A965387004C5829 /* CustomTabBarController.swift */; };
+		2519A61C2A965678004C5829 /* FriendRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2519A61B2A965678004C5829 /* FriendRequestsViewController.swift */; };
+		2519A61E2A965897004C5829 /* RequestHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2519A61D2A965897004C5829 /* RequestHeader.swift */; };
 		25769F552A83E5A8004B1776 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25769F542A83E5A8004B1776 /* AppDelegate.swift */; };
 		25769F572A83E5A8004B1776 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25769F562A83E5A8004B1776 /* SceneDelegate.swift */; };
 		25769F592A83E5A8004B1776 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25769F582A83E5A8004B1776 /* FeedViewController.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2519A6192A965387004C5829 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		2519A61B2A965678004C5829 /* FriendRequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestsViewController.swift; sourceTree = "<group>"; };
+		2519A61D2A965897004C5829 /* RequestHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHeader.swift; sourceTree = "<group>"; };
 		25769F512A83E5A8004B1776 /* FacebookNewsFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookNewsFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25769F542A83E5A8004B1776 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25769F562A83E5A8004B1776 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +53,8 @@
 			isa = PBXGroup;
 			children = (
 				25769F582A83E5A8004B1776 /* FeedViewController.swift */,
+				2519A61B2A965678004C5829 /* FriendRequestsViewController.swift */,
+				2519A6192A965387004C5829 /* CustomTabBarController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -96,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				25961E952A8D1B4000E8A6B9 /* FeedCell.swift */,
+				2519A61D2A965897004C5829 /* RequestHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -178,8 +187,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2519A61E2A965897004C5829 /* RequestHeader.swift in Sources */,
 				25769F592A83E5A8004B1776 /* FeedViewController.swift in Sources */,
+				2519A61C2A965678004C5829 /* FriendRequestsViewController.swift in Sources */,
 				25769F552A83E5A8004B1776 /* AppDelegate.swift in Sources */,
+				2519A61A2A965387004C5829 /* CustomTabBarController.swift in Sources */,
 				25961E912A8D1ADE00E8A6B9 /* UIView+Extension.swift in Sources */,
 				25769F572A83E5A8004B1776 /* SceneDelegate.swift in Sources */,
 				25961E932A8D1B0C00E8A6B9 /* UIColor+Extension.swift in Sources */,

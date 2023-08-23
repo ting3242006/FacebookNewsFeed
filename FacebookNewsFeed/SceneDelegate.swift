@@ -19,12 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        window = UIWindow(frame: UIScreen.main.bounds)
 //        window?.windowScene = windowScene
         window = UIWindow(windowScene: windowScene)
-        
-//        let flowLayout = UICollectionViewFlowLayout()
-        let feedController = FeedViewController(collectionViewLayout: UICollectionViewFlowLayout())
-        window?.rootViewController = UINavigationController(rootViewController: feedController)
-        
         window?.makeKeyAndVisible()
+        window?.rootViewController = CustomTabBarController()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

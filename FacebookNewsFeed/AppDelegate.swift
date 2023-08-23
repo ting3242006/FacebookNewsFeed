@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
             UINavigationBar.appearance().standardAppearance = appearance
             UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        UITabBar.appearance().tintColor = UIColor.rgb(red: 70, green: 146, blue: 250)
         
         // 設置緩存大小
         let memoryCapacity = 500 * 1024 * 1024
