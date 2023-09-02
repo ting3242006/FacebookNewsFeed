@@ -48,6 +48,8 @@ class FeedCell: UICollectionViewCell {
         }
     }
     
+    var feedViewController: FeedViewController?
+    
     private func setupNameLocationStatusAndProfileImage() {
         
         if let name = post?.name {
@@ -81,6 +83,10 @@ class FeedCell: UICollectionViewCell {
         if let statusImageName = post?.statusImageName {
             statusImageView.image = UIImage(named: statusImageName)
         }
+    }
+    
+    @objc func animate() {
+        feedViewController?.animateImageView(statusImageView: statusImageView)
     }
     
     override init(frame: CGRect) {
@@ -120,6 +126,7 @@ class FeedCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.layer.masksToBounds = true
+        imageView.isUserInteractionEnabled = true
         
         return imageView
     }()
@@ -176,6 +183,8 @@ class FeedCell: UICollectionViewCell {
         activityIndicator.color = .gray
         
         statusImageView.addSubview(activityIndicator)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(animate))
+        statusImageView.addGestureRecognizer(tapGesture)
         
         addConstraintsWithFormat(format: "H:|-8-[v0(44)]-8-[v1]|", views: profileImageView, nameLabel)
         addConstraintsWithFormat(format: "H:|-4-[v0]-4-|", views: statusTextView)
